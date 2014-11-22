@@ -12,7 +12,7 @@ files =
 gulp.task 'coffee', () ->
   gulp.src files.coffee
     .pipe coffee()
-    .pipe gulp.dest('js')
+    .pipe gulp.dest('lib')
 
 gulp.task 'watch', ->
   gulp.watch files.coffee, ['coffee']
