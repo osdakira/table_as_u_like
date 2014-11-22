@@ -18,12 +18,10 @@ do (jQuery) ->
       th_list = _($("thead th", $table))
       selectableHeaders = _(th_list).map (x, col) ->
         $x = $(x)
-        $button = $("<button>").attr("type", "button").addClass("btn")
-          .addClass("table-as-you-like-menu-item")
-          .text($x.text())
+        $button = $("<button type='button' class='btn'>#{$x.text()}</button>")
         $button.addClass("disabled") unless (menus_visibled[col] || $x.is(":visible"))
         $button.hide() unless $x.text()
-        $button
+        $("<div/>").addClass("table-as-you-like-menu-item btn-group").append($button)
       $selectableHeaderGroup =
         $("<div class='table-as-you-like-menu btn-group'>").html(selectableHeaders)
       $table.before($selectableHeaderGroup)
@@ -31,14 +29,14 @@ do (jQuery) ->
       storeCookie = ->
         menus_visibled = {}
         _(selectableHeaders).each (x, index) ->
-          menus_visibled[index] = not $(x).hasClass("disabled")
+          menus_visibled[index] = not $(x).find(".btn").hasClass("disabled")
         $.cookie(cookieKey, JSON.stringify(menus_visibled), path: location.pathname)
 
       storeCookie()
 
       th_text_list = _(th_list).map (x) -> $(x).text()
       $selectableHeaderGroup.on "click", ".table-as-you-like-menu-item", ->
-        $menuItem = $(this)
+        $menuItem = $(this).find(".btn")
         $menuItem.toggleClass("disabled")
         th_text = $menuItem.text()
         col = _(th_text_list).indexOf(th_text)
