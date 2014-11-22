@@ -15,10 +15,10 @@
     "tests",
     "README.md",
     "gulpfile.coffee",
-    "src",
+    "src"
   ],
-  "dependencies": [
-    "jquery": "latest"
+  "dependencies": {
+    "jquery": "latest",
     "jquery-cookie": "latest"
-  ]
+  }
 }
