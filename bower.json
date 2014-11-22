@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "jquery": "latest",
-    "jquery-cookie": "latest"
+    "jquery-cookie": "latest",
+    "underscore": "latest"
   }
 }
