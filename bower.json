@@ -2,6 +2,10 @@
   "name": "table_as_u_like",
   "version": "1.0.0",
   "main": "lib/jquery.table_as_u_like.js",
+  "ignore": [
+    "gulpfile.coffee",
+    "src/**",
+    ],
   "dependencies": [
     "jquery": "latest"
   ]
