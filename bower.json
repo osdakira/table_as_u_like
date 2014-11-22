@@ -4,5 +4,6 @@
   "main": "lib/jquery.table_as_u_like.js",
   "dependencies": [
     "jquery": "latest"
+    "jquery-cookie": "latest"
   ]
 }
