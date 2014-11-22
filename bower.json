@@ -1,7 +1,22 @@
 {
   "name": "table_as_u_like",
   "version": "1.0.0",
+  "homepage": "https://github.com/osdakira/table_as_u_like",
+  "authors": [
+    "Akira Osada <osd.akira@gmail.com>"
+  ],
   "main": "lib/jquery.table_as_u_like.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "README.md",
+    "gulpfile.coffee",
+    "src",
+  ],
   "dependencies": [
     "jquery": "latest"
     "jquery-cookie": "latest"
